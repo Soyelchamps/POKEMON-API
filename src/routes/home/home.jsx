@@ -8,17 +8,11 @@ const Home = () => {
   const [filteredUsers, setFilteredUsers] = useState(users);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch("https://pokeapi.co/api/v2/pokemon/?limit=20")
       .then((response) => response.json())
       .then((users) => {
-        const customUser = {
-          id: 90,
-          name: "Jhon Doe",
-          email: "jhondoe@mail.com",
-        };
-
-        setUsers([...users, customUser]);
-        console.log(users);
+        setUsers(users.results);
+        console.log(users.results);
       });
   }, []);
 
@@ -34,7 +28,7 @@ const Home = () => {
   };
 
   return (
-    <div className="App" style={{ border: "2px solid red" }}>
+    <div className="App" >
       <SearchBox onSearchChange={onSearchChangeHandler} />
       <CardList users={filteredUsers} />
     </div>

@@ -18,9 +18,7 @@ const User = () => {
       {userData && (
         <>
           <p>Nombre: {userData.name}</p>
-          <p>Email: {userData.email}</p>
-          <p>Cel: {userData.phone}</p>
-        </>
+         </>
       )}
     </>
   );
