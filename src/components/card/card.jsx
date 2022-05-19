@@ -22,7 +22,6 @@ const Card = ({ user }) => {
       /> )}
       <h2>{name}</h2>
       { pokemon &&
-
       <p>{pokemon.id}</p> }
      
     </Link>
