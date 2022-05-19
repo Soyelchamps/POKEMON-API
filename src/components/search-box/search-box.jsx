@@ -5,7 +5,7 @@ const SearchBox = ({ onSearchChange }) => {
     <input
       className="search-box"
       type="search"
-      placeholder="Buscar usuario(s)..."
+      placeholder="Buscar Pokemon..."
       onChange={onSearchChange}
     />
   );

@@ -4,28 +4,32 @@ import "./card.styles.css";
 
 const Card = ({ user }) => {
   const { name, url } = user;
-
   const [pokemon, setPokemon] = useState(null);
   
-
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
       .then((pokemonData) => {
-       // console.log(pokemonData);
-        console.log(pokemonData.sprites.other.home.front_default)
+        console.log(pokemonData)
         setPokemon(pokemonData);
       });
   }, []);
 
   return (
-    <Link className="card-container" to={`/users/`}>
-      { pokemon && (<img height={100}  alt={`user ${name}`}
+    <Link className="card-container" to={`/usesr/`}>
+      { pokemon && (<img height={200}  alt={`user ${name}`}
         src={pokemon.sprites.other.home.front_default}
       /> )}
       <h2>{name}</h2>
-      
+      { pokemon &&
+
+      <p>{pokemon.id}</p> }
+     
     </Link>
+
+
+
+
   );
 };
 

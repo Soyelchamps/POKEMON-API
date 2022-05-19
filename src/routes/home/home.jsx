@@ -8,7 +8,7 @@ const Home = () => {
   const [filteredUsers, setFilteredUsers] = useState(users);
 
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon/?limit=20")
+    fetch("https://pokeapi.co/api/v2/pokemon/?limit=100")
       .then((response) => response.json())
       .then((users) => {
         setUsers(users.results);
