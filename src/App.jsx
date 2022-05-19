@@ -10,22 +10,6 @@ import SearchBox from "./components/search-box/search-box";
 import CardList from "./components/card-list/card-list";
 const App = () => {
   return (
-    //   <>
-    //   <nav>
-    //     <Link to="/">Home</Link>
-    //     <Link to="/about">About</Link>
-    //   </nav>
-    //   <div style={{ display: "flex" }}>
-    //     <div>Sidebar</div>
-    //     <div style={{ marginLeft: "25px" }}>
-    //       <Outlet />
-    //     </div>
-    //   </div>
-    // </>
-    
-    
-    
-    
     <>
     <nav>
     <Routes>
